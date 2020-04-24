@@ -1,0 +1,4 @@
+.covidlist-container {
+    display: flex;
+    flex-wrap: wrap;
+}
