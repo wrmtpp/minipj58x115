@@ -14,7 +14,7 @@ const Footer = () => {
                                 <i className="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">
                                 </i>
                             </a>
-                            <a className="md-ic" href="https://medium.com/">
+                            <a className="md-ic" href="https://medium.com/@5835512115/mini-project-7a66fbc0ef2f">
                                 <MDBIcon fab icon="medium-m mr-md-5 mr-3 fa-2x" />
                             </a>
 

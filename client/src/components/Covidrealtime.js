@@ -4,6 +4,7 @@ import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import Bar from './Bar';
 import Covidrealtime2 from './Covidrealtime2'
 import Footer from './Footer';
+import Textcovid2 from './Textcovid2'
 
 // https://reactstrap.github.io/
 
@@ -53,7 +54,12 @@ const Covidrealtime = (props) => {
                     </CardBody>
                 </Card>
             </Collapse>
+            <br />
+            <br />
+            <Textcovid2 />
+           
             <Footer />
+
 
         </div>
 
