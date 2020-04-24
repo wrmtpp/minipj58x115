@@ -2,6 +2,11 @@ import React from 'react';
 import './CovidCard.css';
 import {useDispatch, useSelector} from 'react-redux'
 import axios from 'axios'
+import { MDBBtn, MDBIcon } from 'mdbreact';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import "bootstrap-css-only/css/bootstrap.min.css";
+import "mdbreact/dist/css/mdb.css";
+
 const CovidCard = props => {
 
     const dispatch = useDispatch()
@@ -25,8 +30,11 @@ const CovidCard = props => {
 
             </div>
             <div className='covidcard-actions'>
-                <div onClick={updateCovid}>Update</div>
-                <div onClick={deleteCovid}>Delete</div>
+                {/* <div onClick={updateCovid}>Update</div>
+                <div onClick={deleteCovid}>Delete</div> */}
+                <MDBBtn size="sm" color="success" onClick={updateCovid}>Update </MDBBtn>
+                <MDBBtn size="sm" color="danger" onClick={deleteCovid}>Delete </MDBBtn>
+
             </div>
         </div>
 
