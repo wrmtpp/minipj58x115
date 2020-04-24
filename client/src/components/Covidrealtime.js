@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import '../App.css'
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import Bar from './Bar';
-
+import Covidrealtime2 from './Covidrealtime2'
+import Footer from './Footer';
 
 // https://reactstrap.github.io/
 
@@ -28,8 +28,8 @@ const Covidrealtime = (props) => {
     return (
 
         <div className="app-container">
-           
             <Bar />
+            <Covidrealtime2 />
             <h1> CoVid-19 Realtime.</h1>
 
             <Button color="danger" onClick={toggle} style={{ marginBottom: '1rem' }}>
@@ -44,19 +44,19 @@ const Covidrealtime = (props) => {
                             <div> Recovered : {covid.Recovered}                         </div>
                             <div> Hospitalized : {covid.Hospitalized}                    </div>
                             <div> Deaths : {covid.Deaths}                               </div>
-                            <div> NewConfirmed : {covid.NewConfirmed}                   </div>
-                            <div> NewConfirmed : {covid.NewConfirmed}                   </div>
-                            <div> NewRecovered : {covid.NewRecovered}                   </div>
-                            <div> NewHospitalized : {covid.NewHospitalized}           </div>
-                            <div> NewDeaths : {covid.NewDeaths}                     </div>
+
                         </p1>
                         <p2>
                             <div> UpdateDate : {covid.UpdateDate}                       </div>
                         </p2>
+
                     </CardBody>
                 </Card>
             </Collapse>
+            <Footer />
+
         </div>
+
     );
 }
 

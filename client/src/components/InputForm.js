@@ -61,7 +61,7 @@ const InputForm = props => {
 
             </FormGroup>
 
-            <MDBBtn size="md" color="success" onClick={addCovid}><MDBIcon icon="sign-in-alt" className="mr-2" />SUBMIT</MDBBtn>
+            <MDBBtn size="md" color="success" onClick={addCovid}>SUBMIT</MDBBtn>
         </div>
     )
 }

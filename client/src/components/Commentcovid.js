@@ -2,6 +2,7 @@ import React from 'react'
 import Covidlist from './Covidlist'
 import InputForm from './InputForm'
 import Bar from './Bar';
+import Footer from './Footer';
 
 
 
@@ -11,13 +12,12 @@ const Home = props => {
         <div>
 
             <Bar />
-
-
-            <h2>Covids</h2>
+            <br />
+            <h2>รายชื่อผู้ป่วย</h2>
+            <br />
             <Covidlist />
-            <h2>------------------------------------------------------------------------------------------------------</h2>
             <InputForm />
-            <h2>------------------------------------------------------------------------------------------------------</h2>
+            <Footer />
 
             <div>
             </div>

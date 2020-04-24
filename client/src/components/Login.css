@@ -1,8 +1,11 @@
 .LoginForm {
-    
-    display: flex;
-    justify-content: center;
-    margin: 100px;
-    padding: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 100;
+  padding: 100;
 
+}
+h2 {
+  color: rgba(33, 30, 30, 0.783);
+  text-align: center;
 }

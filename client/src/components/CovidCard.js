@@ -30,8 +30,6 @@ const CovidCard = props => {
 
             </div>
             <div className='covidcard-actions'>
-                {/* <div onClick={updateCovid}>Update</div>
-                <div onClick={deleteCovid}>Delete</div> */}
                 <MDBBtn size="sm" color="success" onClick={updateCovid}>Update </MDBBtn>
                 <MDBBtn size="sm" color="danger" onClick={deleteCovid}>Delete </MDBBtn>
 

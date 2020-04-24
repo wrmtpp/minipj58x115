@@ -5,8 +5,8 @@ import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
 import './Login.css'
 import config from '../config'
-import {FormGroup, Input} from 'reactstrap';
-
+import { FormGroup, Input } from 'reactstrap';
+import Img2 from './Img2'
 const Login = () => {
 
     const [email, setEmail] = useState('')
@@ -35,43 +35,27 @@ const Login = () => {
 
 
     return (
-        <div >
-            <MDBContainer>
-                <MDBRow className="LoginForm">
-                    <MDBCol md="9">
-                        <form>
+        <div className="LoginForm" >
+            <form>
+                <MDBContainer>
+                    <h2>Signup</h2><br />
+                    <FormGroup>
+                        <Input type="email" name="email" id="exampleEmail"
+                            placeholder="Email"
+                            onChange={(e) => setEmail(e.target.value)} />
+                    </FormGroup>
+                    <FormGroup>
+                        <Input type="password" name="password" id="examplePassword"
+                            placeholder="Password"
+                            onChange={(e) => setPassword(e.target.value)} />
+                    </FormGroup>
 
+                    <MDBBtn size="md" color="success" onClick={login}><MDBIcon icon="sign-in-alt" className="mr-2" />Login</MDBBtn>
+                    <MDBBtn size="md" color="primary" onClick={signup}> <MDBIcon icon="user" className="mr-2" />Register</MDBBtn>
+                    <Img2 />
 
-                            <p className="h2 text-center mb-4">Sign up</p>
-
-                            <div className="grey-text">
-
-                                <FormGroup>
-
-                                    <Input type="email" name="email" id="exampleEmail"
-                                        placeholder="Email"
-                                        onChange={(e) => setEmail(e.target.value)} />
-
-                                </FormGroup>
-
-                                <FormGroup>
-
-                                    <Input type="password" name="password" id="examplePassword"
-                                        placeholder="Password"
-                                        onChange={(e) => setPassword(e.target.value)} />
-
-                                </FormGroup>
-
-                            </div>
-                            <div className="text-center">
-                                <MDBBtn size="md" color="success" onClick={login}><MDBIcon icon="sign-in-alt" className="mr-2" />Login</MDBBtn>
-                                <MDBBtn size="md" color="primary" onClick={signup}> <MDBIcon icon="user" className="mr-2" />Register</MDBBtn>
-
-                            </div>
-                        </form>
-                    </MDBCol>
-                </MDBRow>
-            </MDBContainer>
+                </MDBContainer>
+            </form>
         </div>
     )
 }
