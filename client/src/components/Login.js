@@ -37,6 +37,10 @@ const Login = () => {
     return (
         <div className="LoginForm" >
             <form>
+                <br/>
+
+                <img src="icon.png">
+                </img>
                 <MDBContainer>
                     <h2>Signup</h2><br />
                     <FormGroup>
