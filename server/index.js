@@ -2,6 +2,7 @@ let express = require('express');
 let bodyParser = require('body-parser');
 let router = express.Router();
 let cors = require('cors');
+let env = require('dotenv').config()
 let app = express();
 app.use(cors());
 
@@ -20,7 +21,7 @@ let covids = [
     },
     {
         id: 1,
-        name: "สมพร",
+        name: "สมหญิง",
         todo: "มีอาการเมื่อยตัว",
         no: "00001",
         date: "28/02/63",
@@ -47,9 +48,34 @@ let covids = [
         name: "สมปอง",
         todo: "มีไข้สูง",
         no: "00004",
-        date: "13/04/63",
+        date: "14/04/63",
         img: "./5.jpg"
+    },
+    {
+        id: 5,
+        name: "ปาริชาติ",
+        todo: "มีอาการเเทรกซ้อน",
+        no: "00005",
+        date: "12/04/63",
+        img: "./pari.jpg"
+    },
+    {
+        id: 6,
+        name: "อัครชาติ",
+        todo: "มีไข้สูง และมีผื่นขึ้น",
+        no: "00006",
+        date: "03/04/63",
+        img: "./ak.jpg"
+    },
+    {
+        id: 7,
+        name: "สิริรักษ์",
+        todo: "มีไข้สูง และไอ",
+        no: "00007",
+        date: "13/04/63",
+        img: "./siri.jpg"
     }
+
 
 ]
 
@@ -95,4 +121,4 @@ router.route('/covids/:covid_id')
 
 
 app.use("*", (req, res) => res.status(404).send('404 Not found'));
-app.listen(8080, () => console.log("Server is running"));
+app.listen( process.env.PORT ,  () => console.log("Server is running") );

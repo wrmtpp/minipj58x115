@@ -18,7 +18,7 @@ const InputForm = props => {
     const form = useSelector(state => state.form)
 
     const addCovid = async () => {
-        const result = await axios.post(`http://localhost:8080/api/covids/`, form)
+        const result = await axios.post(`https://fierce-citadel-85386.herokuapp.com/api/covids`, form)
         dispatch({
             type: "ADD_COVID",
             covid: { ...form, id: covids.length > 0 ? covids[covids.length - 1].id + 1 : 0 }

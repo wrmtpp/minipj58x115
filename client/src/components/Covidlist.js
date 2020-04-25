@@ -8,7 +8,7 @@ const Covidlist = props => {
     const dispatch = useDispatch();
 
     const getCovids = async () => {
-        const result = await axios.get(`http://localhost:8080/api/covids`)
+        const result = await axios.get(`https://fierce-citadel-85386.herokuapp.com/api/covids`)
         const action = { type: 'GET_COVIDS', covids: result.data }
         dispatch(action)
     }

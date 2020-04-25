@@ -12,12 +12,12 @@ const CovidCard = props => {
     const dispatch = useDispatch()
     const form = useSelector(state => state.form)
     const deleteCovid = async () => {
-        const result = await axios.delete(`http://localhost:8080/api/covids/${props.id}`)
+        const result = await axios.delete(`https://fierce-citadel-85386.herokuapp.com/api/covids/${props.id}`)
         dispatch({type : 'DELETE_COVID', id: props.id})
       }
     
     const updateCovid = async () => {
-    const result = await axios.put(`http://localhost:8080/api/covids/${props.id}`,form)
+    const result = await axios.put(`https://fierce-citadel-85386.herokuapp.com/api/covids/${props.id}`,form)
     dispatch({type : 'UPDATE_COVID', id: props.id , covid: {...form, id: props.id}})
   }
     return (
