@@ -24,7 +24,7 @@ const Covidlist = props => {
         <div className='covidlist-container'>
             {
                 covids.map((covid, index) => (
-                    <div key={index} style={{ margin: 5 }}>
+                    <div key={index} style={{ margin:40 }}>
                         <CovidCard  {...covid} updateCovid={() => props.updateCovid(covid.id)} deleteCovid={() => props.deleteCovid(covid.id)} />
                     </div>
                 ))

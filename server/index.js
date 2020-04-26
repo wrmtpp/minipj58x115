@@ -15,7 +15,7 @@ let covids = [
         id: 0,
         name: "วรเมธ",
         todo: "มีอาการไอ",
-        no: "58115",
+        no: "58.115",
         date: "24/02/63",
         img: "./1.jpg"
     },
@@ -23,7 +23,7 @@ let covids = [
         id: 1,
         name: "สมหญิง",
         todo: "มีอาการเมื่อยตัว",
-        no: "00001",
+        no: "02.036",
         date: "28/02/63",
         img: "./2.jpg"
     },
@@ -31,7 +31,7 @@ let covids = [
         id: 2,
         name: "สมหมาย",
         todo: "อาการดีขึ้นจากเมื่อวาน",
-        no: "00002",
+        no: "03.424",
         date: "10/03/63",
         img: "./3.jpg"
     },
@@ -39,7 +39,7 @@ let covids = [
         id: 3,
         name: "ฉัตรชัย",
         todo: "หายใจไม่สะดวก",
-        no: "00003",
+        no: "03.234",
         date: "01/04/63",
         img: "./4.png"
     },
@@ -47,7 +47,7 @@ let covids = [
         id: 4,
         name: "สมปอง",
         todo: "มีไข้สูง",
-        no: "00004",
+        no: "05.342",
         date: "14/04/63",
         img: "./5.jpg"
     },
@@ -55,7 +55,7 @@ let covids = [
         id: 5,
         name: "ปาริชาติ",
         todo: "มีอาการเเทรกซ้อน",
-        no: "00005",
+        no: "02.508",
         date: "12/04/63",
         img: "./pari.jpg"
     },
@@ -63,7 +63,7 @@ let covids = [
         id: 6,
         name: "อัครชาติ",
         todo: "มีไข้สูง และมีผื่นขึ้น",
-        no: "00006",
+        no: "02.556",
         date: "03/04/63",
         img: "./ak.jpg"
     },
@@ -71,7 +71,7 @@ let covids = [
         id: 7,
         name: "สิริรักษ์",
         todo: "มีไข้สูง และไอ",
-        no: "00007",
+        no: "01.006",
         date: "13/04/63",
         img: "./siri.jpg"
     }
@@ -121,4 +121,4 @@ router.route('/covids/:covid_id')
 
 
 app.use("*", (req, res) => res.status(404).send('404 Not found'));
-app.listen( process.env.PORT ,  () => console.log("Server is running") );
+app.listen(process.env.PORT, () => console.log("Server is running"));

@@ -26,43 +26,52 @@ const InputForm = props => {
     }
 
     return (
+        <MDBContainer>
+            <MDBRow>
+                <MDBCol>
+                    <div className="grey-text mb-10 pt-10 font-weight-bold">
 
-        <div className="grey-text">
+                        <h1>บันทึกทางการเเพทย์</h1>
 
-            <h1>บันทึกทางการเเพทย์</h1>
+                        <FormGroup>
 
-            <FormGroup>
+                            รหัสผู้ป่วย <Input type="number" placeholder="58.115" text-color="red" onChange={(e) => dispatch({ type: "CHANGE_NO", no: e.target.value })} />
 
-                รหัสผู้ป่วย <Input type="number" onChange={(e) => dispatch({ type: "CHANGE_NO", no: e.target.value })} />
+                        </FormGroup>
 
-            </FormGroup>
+                        <FormGroup>
 
-            <FormGroup>
+                            วันที่ <Input type="text" placeholder="09/09/63" onChange={(e) => dispatch({ type: "CHANGE_DATE", date: e.target.value })} />
 
-                วันที่ <Input type="text" onChange={(e) => dispatch({ type: "CHANGE_DATE", date: e.target.value })} />
+                        </FormGroup>
 
-            </FormGroup>
+                        <FormGroup>
 
-            <FormGroup>
+                            ชื่อผู้ป่วย <Input type="text" placeholder="นาย ก." onChange={(e) => dispatch({ type: "CHANGE_NAME", name: e.target.value })} />
 
-                ชื่อผู้ป่วย <Input type="text" onChange={(e) => dispatch({ type: "CHANGE_NAME", name: e.target.value })} />
+                        </FormGroup>
 
-            </FormGroup>
+                        <FormGroup>
 
-            <FormGroup>
+                            อาการของผู้ป่วย <Input type="text" placeholder="มีน้ำมูก" onChange={(e) => dispatch({ type: "CHANGE_TODO", todo: e.target.value })} />
 
-                อาการของผู้ป่วย <Input type="text" onChange={(e) => dispatch({ type: "CHANGE_TODO", todo: e.target.value })} />
+                        </FormGroup>
 
-            </FormGroup>
+                        <FormGroup>
 
-            <FormGroup>
+                            รูปผู้ป่วย <Input type="text" placeholder="url image Address" onChange={(e) => dispatch({ type: "CHANGE_IMG", img: e.target.value })} /> <br />
 
-                รูปผู้ป่วย <Input type="text" onChange={(e) => dispatch({ type: "CHANGE_IMG", img: e.target.value })} /> <br />
+                        </FormGroup>
 
-            </FormGroup>
+                        <MDBBtn size="md" color="success" onClick={addCovid}>SUBMIT</MDBBtn>
+                    </div>
+                </MDBCol>
+            </MDBRow>
+            <br/>
+            <br/>
 
-            <MDBBtn size="md" color="success" onClick={addCovid}>SUBMIT</MDBBtn>
-        </div>
+        </MDBContainer>
+
     )
 }
 
