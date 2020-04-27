@@ -183,20 +183,20 @@ router.route('/covids/:covid_id')
                         
         let id = req.params.covids_id
         let index = covids.findIndex(covid => (covid.id === +id))
-        covids[index].name = req.body.name.name;
-        covids[index].todo = req.body.todo.todo;
-        covids[index].no = req.body.no.no;
-        covids[index].date = req.body.date.date;
-        covids[index].img = req.body.img.img;          
+        covids[index].name = req.body.name;
+        covids[index].todo = req.body.todo;
+        covids[index].no = req.body.no;
+        covids[index].date = req.body.date;
+        covids[index].img = req.body.img;          
         res.json({ message: 'Covid updated!' + req.params.covid_id });
     })
     .delete((req, res) => {                   
         let id = req.params.covid_id
-        let index = covids.findIndex(covid => covids.id === +id)
+        let index = covids.findIndex(covid => covid.id === +id)
         covids.splice(index, 1)
         res.json({ message: 'Covid deleted: ' + req.params.covid_id });
     })
 
 
-app.use("*", (req, res) => req.status(404).send('404 Not found'));
-app.listen(process.env.PORT ,() => (console.log("Server is running"));
+app.use("*", (req, res) => res.status(404).send('404 Not found'));
+app.listen(process.env.PORT ,() => console.log("Server is running"));
