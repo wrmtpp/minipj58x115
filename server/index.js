@@ -158,9 +158,7 @@ let covids = [
     
 
 router.route('/covids')
-    // get all covids
     .get((req, res) => res.json(covids))
-    // insert a new covid
     .post((req, res) => {
         var covid = {};
         covid.id = covids.length > 0 ? covids[covids.length - 1].id + 1 : 0;

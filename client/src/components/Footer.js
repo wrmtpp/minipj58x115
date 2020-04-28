@@ -22,7 +22,7 @@ const Footer = () => {
                                 <MDBIcon fab icon="github mr-md-5 mr-3 fa-2x" />
                             </a>
 
-                            <a className="yt-ic" href="https://www.youtube.com/">
+                            <a className="yt-ic" href="https://www.youtube.com/watch?v=YaGSCdwjLzg&t=0s">
                                 <MDBIcon fab icon="youtube mr-md-5 mr-3 fa-2x" />
                             </a>
 
